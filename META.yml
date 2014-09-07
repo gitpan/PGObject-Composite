@@ -4,8 +4,6 @@ author:
   - 'Chris Travers <chris@efficito.com>'
 build_requires:
   Test::More: 0
-configure_requires:
-  ExtUtils::MakeMaker: 0
 dynamic_config: 1
 generated_by: 'ExtUtils::MakeMaker version 6.72, CPAN::Meta::Converter version 2.132140'
 license: bsd
@@ -19,7 +17,9 @@ no_index:
     - inc
 requires:
   Carp: 0
-  PGObject: 0
+  PGObject: v1.402.4
   PGObject::Type::Composite: 0
   perl: 5.006
-version: 0.01
+resources:
+  repository: https://github.com/ledgersmb/PGObject-Composite.git
+version: 0.02

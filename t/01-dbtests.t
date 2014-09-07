@@ -55,12 +55,12 @@ ok($ref = $obj->call_dbmethod(funcname => 'foobar'), 'Called simple method succe
 
 is($ref->{foobar}, $answer, 'Got correct answer from foobar');
 
-ok($ref = $obj->call_procedure(funcname => 'foobar', args => [$obj->to_db]), 
+ok($ref = $obj->call_procedure(funcname => 'foobar', args => [$obj]), 
    'called same function using call_procedure');
 
 is($ref->{foobar}, $answer, 'Got correct answer from foobar using call_procedure');
 
-ok($ref = $obj->call_procedure(funcname => 'multifoo', args => [$obj->to_db, 4]), 
+ok($ref = $obj->call_procedure(funcname => 'multifoo', args => [$obj, 4]), 
    'called multifoo function using call_procedure');
 
 is($ref->{multifoo}, $answer * 4, 'Got correct answer from multifoo using call_procedure');

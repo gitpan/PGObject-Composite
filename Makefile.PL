@@ -19,9 +19,19 @@ WriteMakefile(
     },
     PREREQ_PM => {
             'PGObject::Type::Composite'   => 0,
-            'PGObject'                    => 0,
+            'PGObject'                    => '1.402.4',
             'Carp'                        => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'PGObject-Composite-*' },
+    META_MERGE => {
+        'meta-spec' => { version => 2 },
+         resources => {
+             repository => {
+                 type => 'git',
+                 url  => 'https://github.com/ledgersmb/PGObject-Composite.git',
+                 web  => 'https://github.com/ledgersmb/PGObject-Composite',
+             },
+         },
+    },
 );

@@ -14,11 +14,11 @@ PGObject::Composite - Composite Type Mapper for PGObject
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -94,7 +94,7 @@ sub call_dbmethod {
     );
     my @dbargs = (map { my $name = $_->{name};
                        $name =~ s/^in_//i;
-                       $name eq 'self'? $self->to_db : $args{args}->{$name} ;
+                       $name eq 'self'? $self : $args{args}->{$name} ;
                } @{$funcinfo->{args}});
     my @rows = PGObject->call_procedure(%args, ( args => \@dbargs ));
     return shift @rows unless wantarray;

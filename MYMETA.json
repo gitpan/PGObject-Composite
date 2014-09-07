@@ -25,20 +25,22 @@
             "Test::More" : "0"
          }
       },
-      "configure" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
       "runtime" : {
          "requires" : {
             "Carp" : "0",
-            "PGObject" : "0",
+            "PGObject" : "v1.402.4",
             "PGObject::Type::Composite" : "0",
             "perl" : "5.006"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ledgersmb/PGObject-Composite.git",
+         "web" : "https://github.com/ledgersmb/PGObject-Composite"
+      }
+   },
+   "version" : "0.02"
 }
